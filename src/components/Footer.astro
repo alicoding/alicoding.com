@@ -1,0 +1,21 @@
+---
+const socials = [
+  { href: 'https://github.com/alicoding', label: 'GitHub' },
+  { href: 'https://www.linkedin.com/in/aldallal.ali', label: 'LinkedIn' },
+  { href: 'https://x.com/alicoding', label: 'X' },
+  { href: 'mailto:ali@alicoding.com', label: 'ali@alicoding.com' },
+];
+---
+
+<footer id="contact">
+  <div class="wrap row">
+    <div>© <span id="yr">2026</span> Ali Al Dallal · Toronto, Canada</div>
+    <div class="socials">
+      {socials.map((social) => <a href={social.href}>{social.label}</a>)}
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr')!.textContent = String(new Date().getFullYear());
+</script>

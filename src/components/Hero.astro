@@ -1,0 +1,29 @@
+---
+const ctas = [
+  { href: 'https://github.com/alicoding', label: 'GitHub', primary: true },
+  { href: 'https://www.linkedin.com/in/aldallal.ali', label: 'LinkedIn', primary: false },
+  { href: 'https://x.com/alicoding', label: 'X', primary: false },
+  { href: 'mailto:ali@alicoding.com', label: 'Email', primary: false },
+];
+---
+
+<div class="hero">
+  <img src="/images/profile.jpeg" alt="Ali Al Dallal" />
+  <h1>Ali Al Dallal</h1>
+  <div class="role">Principal Engineer at Tangerine</div>
+  <p class="lede">
+    I lead the <strong>onboarding domain</strong> at Tangerine — the systems that turn
+    applicants into customers. Before that: nine years at <strong>Scotiabank</strong> and three at
+    <strong>Mozilla</strong>. I build developer tools in the open; lately they are all about working
+    with AI agents without giving up the human gate.
+  </p>
+  <div class="cta">
+    {
+      ctas.map((cta) => (
+        <a class={cta.primary ? 'btn primary' : 'btn'} href={cta.href}>
+          {cta.label}
+        </a>
+      ))
+    }
+  </div>
+</div>

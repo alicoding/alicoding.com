@@ -1,0 +1,45 @@
+---
+const projects = [
+  {
+    meta: 'Desktop app · Go + React',
+    name: 'Mill',
+    href: 'https://github.com/millhq/mill',
+    body: 'Guardrailed agentic workflows on your desktop. Agents and humans work from the same verified view, and every action that reaches outside your machine is previewed and gated before it happens.',
+  },
+  {
+    meta: 'Open source · Python · PyPI',
+    name: 'clip-harness',
+    href: 'https://github.com/millhq/clip-harness',
+    body: 'A human-in-the-loop execution bridge: a chat model proposes commands, the harness runs them locally behind a review gate, and the result goes back on the clipboard.',
+  },
+  {
+    meta: 'Open source · React',
+    name: 'react-webpack-babel',
+    href: 'https://github.com/alicoding/react-webpack-babel',
+    body: 'The deliberately simple React + Webpack + Babel starter. No Redux, no frameworks, no 250 MB of dependencies — just enough to start, the rest is up to you.',
+  },
+  {
+    meta: 'Writing',
+    name: 'ai.alicoding.com',
+    href: 'https://ai.alicoding.com',
+    body: 'Notes on building with AI agents — home of the SKILL.md golden-standard research and the patterns behind the tools above.',
+  },
+];
+---
+
+<section id="projects">
+  <h2>Building in the open</h2>
+  <div class="grid">
+    {
+      projects.map((project) => (
+        <div class="card">
+          <div class="meta">{project.meta}</div>
+          <h3>
+            <a href={project.href}>{project.name}</a>
+          </h3>
+          <p>{project.body}</p>
+        </div>
+      ))
+    }
+  </div>
+</section>

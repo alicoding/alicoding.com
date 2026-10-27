@@ -1,0 +1,53 @@
+---
+const jobs = [
+  {
+    when: '2025 — now',
+    title: 'Principal Engineer',
+    org: 'Tangerine',
+    body: "Own the onboarding domain — person and business — on the bank's core-platform migration.",
+  },
+  {
+    when: '2016 — 2025',
+    title: 'Developer → Senior Solutions Architect',
+    org: 'Scotiabank',
+    body: 'Nine years across engineering and architecture: developer, senior developer, tech lead in the Digital Factory, then solutions architect and senior solutions architect.',
+  },
+  {
+    when: '2013 — 2016',
+    title: 'Developer & Localization Lead',
+    org: 'Mozilla',
+    body: 'Started as an intern, stayed full-time. Led localization work and contributed to WebMaker and web captions (vtt.js).',
+  },
+  {
+    when: 'Before that',
+    title: 'Thailand → Canada',
+    org: null,
+    body: 'Born in Iraq, raised in Thailand — 18 years there before moving to Canada in 2009. Tutored and worked as a research assistant at Seneca College (2012–2014), and started writing on this domain in 2013.',
+  },
+];
+---
+
+<section id="path">
+  <h2>Path</h2>
+  <div class="timeline">
+    {
+      jobs.map((job) => (
+        <div class="job">
+          <div class="when">{job.when}</div>
+          <div>
+            <h3>
+              {job.title}
+              {job.org && (
+                <>
+                  {' · '}
+                  <span class="org">{job.org}</span>
+                </>
+              )}
+            </h3>
+            <p>{job.body}</p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>
